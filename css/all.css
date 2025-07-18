@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+/*圖片不管多大都會控制在父層內*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*不計算padding 和 border*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*預設字體*/
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  line-height: 1.5;
+}
+
+/* html mold */
+.container {
+  max-width: 1296px;
+  margin: 0 auto;
+}
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0px;
+}
+.navBar span{
+  display: flex;
+}
+.menu {
+  display: flex;
+}
+a {
+  text-decoration: none;
+}
+.menuLOGO {
+  font-size: 20px;
+  font-weight: 700;
+  color: #212529;
+  padding: 8px 12px;
+  margin-right: 48px;
+  position: relative;
+  z-index: 1;
+}
+.menuLOGO::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #c0fa73; /* 圓點顏色 */
+  border-radius: 50%; /* 讓它變成圓形 */
+  margin-right: 8px; /* 與文字的間距 */
+  vertical-align: middle; /* 垂直對齊文字 */
+  position: absolute;
+  top: 14px;
+  left: 86%;
+  z-index: -1;
+}
+
+.menuP {
+  font-weight: 500;
+  color: #212529;
+  padding: 12px 0px;
+  margin-right: 40px;
+}
+.menuP:hover {
+  color: #6c757d;
+  cursor: pointer;
+}
+.navBtn i{
+  color: #212529;
+  font-size: 24px;
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+}
+@media (max-width: 576px) {
+  .navBar span {
+    display: none;
+  }
+}
+.tips {
+  background-color: #e8fec5;
+  padding: 24px 0px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+
+}
+.tips div{
+  padding-top: 48px;
+}
+
+.tips p {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #212529;
+  display: inline-block;
+}
+.tipsBtn {
+  background-color: #212529;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 12px 24px;
+  border-radius: 8px;
+}
+.tipsBtn:hover {
+  background-color: #495057;
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  .tips {
+    padding: 24px 12px;
+  }
+  .tips div{
+  padding-top: 24px;
+}
+  .tips p {
+    font-size: 20px;
+  }
+  .tipsBtn {
+    padding: 8px 16px;
+  }
+}
+footer {
+  padding: 64px 0px;
+  background-color: #f8f9fa;
+}
+.footerContent {
+  padding-top: 32px;
+  border-top: 1px solid #dee2e6;
+  text-align: center;
+}
+
+.footerContent p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+@media (max-width: 576px) {
+  footer {
+    padding: 32px 12px;
+  }
+  footer .navBar {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  footer .menu {
+    display: flex;
+    flex-direction: column;
+    padding-left: 12px;
+  }
+  footer .menu a {
+    display: block;
+    width: 100%;
+  }
+  footer .menu p {
+    padding: 12px 0px;
+  }
+}
+
+/* html mold */
+
+/* Utilities */
+.mb-40{
+  margin-bottom: 40px;
+}
+/* Utilities */
